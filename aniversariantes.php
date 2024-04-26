@@ -14,13 +14,13 @@ $client->setAuthConfig('C:\Users\Frederico\Documents\Frederico\Programacao\Proce
 $service = new Google_Service_Sheets($client);
 
 // Testar conexão com API Google
-try {
-    $response = $service->spreadsheets_values->get($spreadsheetId, $range);
-    $values = $response->getValues();
-    echo "Conexão bem-sucedida!";
-} catch (Exception $e) {
-    echo "Erro: " . $e->getMessage();
-}
+// try {
+//     $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+//     $values = $response->getValues();
+//     echo "Conexão bem-sucedida!";
+// } catch (Exception $e) {
+//     echo "Erro: " . $e->getMessage();
+// }
 
 echo "<title>Aniversários do Mês</title>";
 echo "<link rel='stylesheet' type='text/css' href='main.css'>";
