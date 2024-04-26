@@ -34,6 +34,47 @@ echo "<svg xmlns='http://www.w3.org/2000/svg' height='32' width='28' fill='#007b
 echo "<h1>Aniversários do Mês</h1>";
 echo "</div>";
 
+try {
+    // Busca os dados da planilha
+    $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+    $values = $response->getValues();
+
+    // Filtra os colaboradores que ainda estão na empresa
+    $values = array_filter($values, function($row) {
+        return empty($row[3]); // Ignora se a coluna 4 (Data de Saída) estiver preenchida
+    });
+
+    // Inicia a tabela
+    echo "<table border='1'>";
+    echo "<tr><th>Colaborador</th><th>Data de Nascimento</th><th>Data de Entrada</th></tr>";
+
+    // Verifica os aniversários
+    foreach($values as $row) {
+        $birthDate = DateTime::createFromFormat('d/m/Y', $row[1]); // Coluna 2 que é a data de nascimento
+        $joinDate = DateTime::createFromFormat('d/m/Y', $row[2]); // Coluna 3 que é a data de admissão
+
+        // Verifica se é aniversário de nascimento ou de empresa
+        $isBirthday = $birthDate && $birthDate->format('m-d') == date('m-d');
+        $isWorkAnniversary = $joinDate && $joinDate->format('m-d') == date('m-d');
+
+        // Define a classe da linha
+        $rowClass = $isBirthday || $isWorkAnniversary ? 'birthday' : '';
+
+        // Imprime a linha
+        echo "<tr class='{$rowClass}'>";
+        echo "<td>{$row[0]}</td>"; // Colaborador
+        echo "<td>{$row[1]}</td>"; // Data de Nascimento
+        echo "<td>{$row[2]}</td>"; // Data de Entrada
+        echo "</tr>";
+    }
+
+    // Finaliza a tabela
+    echo "</table>";
+
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
 echo "<div class='marker'>";
 echo "<svg xmlns='http://www.w3.org/2000/svg' fill='#007bff' heigth='12' width='10.5' viewBox='0 0 448 512'><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z'/></svg>";
 echo "<h3>Aniversariante do Dia</h3>";
