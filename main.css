@@ -40,8 +40,9 @@ button {
 }
 
 button:hover {
-    background-color: #56a8ff;
+    background-color: #90c5fd;
     cursor: pointer;
+    color: #007bff;
 }
 
 footer {
