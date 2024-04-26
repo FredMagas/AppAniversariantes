@@ -34,6 +34,10 @@ echo "<svg xmlns='http://www.w3.org/2000/svg' height='32' width='28' fill='#007b
 echo "<h1>Aniversários do Mês</h1>";
 echo "</div>";
 
+echo "<a class='buttonVoltar' href='index.html'>";
+echo "<button>Voltar</button>";
+echo "</a>";
+
 try {
     // Busca os dados da planilha
     $response = $service->spreadsheets_values->get($spreadsheetId, $range);
