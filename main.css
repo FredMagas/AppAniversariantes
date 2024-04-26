@@ -29,6 +29,21 @@ main p {
     margin: 5px 0;
 }
 
+button {
+    font-weight: 600;
+    color: #fff;
+    margin: 5vh 0;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #56a8ff;
+    cursor: pointer;
+}
+
 footer {
     display: flex;
     justify-content: center;
