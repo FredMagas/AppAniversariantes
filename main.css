@@ -16,7 +16,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-bottom: 5px;
+        margin-bottom: 30px;
     }
     
     .title svg {
@@ -52,7 +52,7 @@ button {
 }
 
 a button {
-    margin: 1vh 0;
+    margin: 1px 0;
 }
 
 button:hover {
