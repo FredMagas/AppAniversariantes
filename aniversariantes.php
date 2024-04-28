@@ -10,7 +10,7 @@ $client = new \Google_Client();
 $client->setApplicationName('App Aniversariantes');
 $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
 $client->setAccessType('offline');
-$client->setAuthConfig('C:\Users\Frederico\Documents\Frederico\Programacao\Processos Seletivos\Carefy\Final\App Aniversariantes\credentials.json');
+$client->setAuthConfig('/var/www/html/credentials.json');
 $service = new Google_Service_Sheets($client);
 
 // Testar conexão com API Google
