@@ -34,10 +34,6 @@ echo "<svg xmlns='http://www.w3.org/2000/svg' height='32' width='28' fill='#007b
 echo "<h1>Aniversários do Mês</h1>";
 echo "</div>";
 
-echo "<a class='buttonVoltar' href='index.html'>";
-echo "<button>Voltar</button>";
-echo "</a>";
-
 try {
     // Busca os dados da planilha
     $response = $service->spreadsheets_values->get($spreadsheetId, $range);
@@ -83,6 +79,10 @@ echo "<div class='marker'>";
 echo "<svg xmlns='http://www.w3.org/2000/svg' fill='#007bff' heigth='12' width='10.5' viewBox='0 0 448 512'><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z'/></svg>";
 echo "<h3>Aniversariante do Dia</h3>";
 echo "</div>";
+
+echo "<a class='buttonVoltar' href='index.html'>";
+echo "<button>Voltar</button>";
+echo "</a>";
 
 echo "<footer><img src='./images/birthday-cake.svg'></footer>";
 echo "<h3>© Frederico Magalhães - 2024</h3>";
