@@ -2,7 +2,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 // Configurações da API do Google Sheets
-$spreadsheetId = '1D36qiRNzj1Bn3Jm8tMav_rdrd6W3GOivvp1sjeZX880'; // ID da planilha
+$spreadsheetId = '1-fWXw-8tuKHiDdaSmNIUnNcRrcah2D8Bw_zaME0HxpM'; // ID da planilha
 $range = 'Página1'; // Nome da aba
 
 // Autenticação
