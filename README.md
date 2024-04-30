@@ -4,7 +4,7 @@ Este é um projeto onde utilizei o PHP 8.3, API do Google Sheets e o Docker Comp
 
 ## Pré-requisitos
 
-Antes de começar, certifique-se de ter o PHP 8.3 e o Docker Compose instalado em seu sistema. Se você não tiver, você pode baixá-lo do site oficial do PHP(https://www.php.net/downloads.php) e do Docker (https://www.docker.com/get-started/).
+Antes de começar, certifique-se de ter o PHP 8.3 e o Docker Compose instalado em seu sistema. Se você não tiver, você pode baixá-lo do site oficial do [PHP](https://www.php.net/downloads.php) e do [Docker](https://www.docker.com/get-started/).
 
 ## Como instalar
 
