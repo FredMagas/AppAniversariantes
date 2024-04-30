@@ -30,7 +30,7 @@ Este projeto pode ser executado dentro de um container Docker usando Docker Comp
 
 2. Construa e execute o container Docker usando o seguinte comando:
 
-docker-compose up --build -d
+   docker-compose up --build -d
 
 3. Agora, a aplicação deve estar disponível em http://localhost:8080
 
