@@ -36,4 +36,6 @@ docker-compose up --build -d
 
 ## Acessando o Projeto Final
 
-Para acessar o projeto final com deploy no Azure utilizando o plano gratuito clique na seguinte url: [app-](https://app-aniversario.azurewebsites.net/)
+Para acessar o projeto final com deploy no Azure utilizando o plano gratuito **(pode levar até 2 minutos para que o aplicativo carregue)** clique na seguinte url: 
+
+https://app-aniversario.azurewebsites.net/
